@@ -1,0 +1,18 @@
+.footer{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.footer p{
+    font-size: 12px;
+}
+.icon{
+    margin: 0 5px;
+    cursor: pointer;
+}
+.icon:hover{
+    opacity: 0.6;
+    transition: 0.2s;
+}
