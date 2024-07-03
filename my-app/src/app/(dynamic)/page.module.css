@@ -1,0 +1,120 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(4, 22%);
+    gap: 50px 30px;
+    margin: 30px 0 50px;  
+}
+
+.post{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 1px solid #5b5b5b;
+    border-radius: 15px;
+    gap: 20px;
+    position: relative;
+}
+.removeImg{
+    display: none;
+    z-index: 100;
+    position: absolute;
+    /* top: -40px; */
+}
+.post:hover{
+    /* border: 1px solid #fff; */
+    box-shadow: 0 2px 14px rgb(174, 174, 174);
+}
+.post:hover .removeImg{
+    display: block;
+}
+.imageContainer{
+    height: 250px;
+    position: relative;
+}
+
+
+.image{
+    object-fit: contain;
+    border-radius: 15px 15px 0 0;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    margin: 10px;
+    margin-bottom: 20px;
+}
+
+.title{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.text{
+    color: #c9c8c8;
+    padding:10px 8px 10px;
+    font-size: 14px;
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #111;
+    border-radius: 0 0 15px 15px;
+    text-align: justify;
+    background-color: #c9c8c8;
+    color: #111;
+}
+.post:hover .text{
+    display: block;
+    transform: translateY(100%);
+    animation: revealText 0.8s forwards;
+}
+
+@keyframes revealText {
+    from {
+        transform: translateY(10%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/*----review ------*/
+
+.review{
+    position: absolute;
+    right: 1px;
+    bottom: 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: green;
+    border: 2px solid green;
+    border-radius: 50%;
+    padding: 6px 5px;
+}
+
+
+
+
+
+
+
+@media (max-width: 1050px){
+    .container{
+        grid-template-columns: repeat(3, 30%);   
+    }
+    .title{
+        font-size: 16px;
+        font-weight: 700;
+    }
+    .text{
+        font-size: 11px;
+    }
+}
+@media (max-width: 600px){
+    .container{
+        grid-template-columns: repeat(2, 46%);   
+    }
+   
+}
