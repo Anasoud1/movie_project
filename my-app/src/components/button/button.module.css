@@ -1,0 +1,28 @@
+.btn{
+    background-color: #0CA040;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.addBtn{
+    background-color: #0CA040;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.addIcon{
+  padding-right: 4px;
+}
+.removeIcon{
+  padding-right: 8px;
+}
+
+@media (max-width:1300px){
+    .btn{
+      font-size: 11px;
+    }
+  }
