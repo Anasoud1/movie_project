@@ -1,0 +1,116 @@
+.player{
+    position: relative;
+}
+
+.image{
+    background-color: #fff;
+    border-radius: 50px;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}
+.frame{
+    margin: 40px 0;
+    height: 70vh;
+}
+/**** image *****/
+.imgContainer{
+    position: relative;
+    height: 100px;
+    width: 90px;
+}
+
+.imgProfile{
+    border-radius: 50%;
+}
+
+/*------ row --------*/
+
+.row{
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+
+/**** info box ***** */
+
+.genres{
+    margin-top: 20px;
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+.genres li{
+    /* flex: 1 1 33%; */
+    border: 2px solid green;
+    border-radius: 20px;
+    padding: 8px 10px;
+    font-size: 14px;
+}
+
+
+/* -----actor box -----*/
+.actors{
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 30px;
+
+}
+.actors li{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+.box{
+    margin-left: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+}
+.actorName{
+    font-size: 20px;
+    font-weight: 700;
+}
+.character{
+    font-size: 12px;
+}
+
+.title{
+    margin-bottom: 40px;
+}
+
+
+/*-------recommendattion --------*/
+.recommendation{
+    display: grid;
+    grid-template-columns: repeat(4, 22%);
+    gap: 50px 30px;
+    margin: 20px 0 50px;  
+}
+.recomContainer{
+    margin-top: 100px;
+}
+
+
+
+@media (max-width:1060px) {
+    .actorName{
+        font-size: 16px;
+    }
+    .character{
+        font-size: 12px;
+    }
+
+    .row{
+        display: flex;
+        flex-direction: column-reverse;
+
+    }
+    .recommendation{
+        grid-template-columns: 1fr 1fr
+    }
+}
