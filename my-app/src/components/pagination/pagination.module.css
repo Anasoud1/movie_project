@@ -1,0 +1,19 @@
+.pagination{
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 40px;
+}
+
+.btn{
+    background-color: green;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    
+}
+.active{
+    background-color: rgb(2, 92, 33);
+}
