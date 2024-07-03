@@ -1,7 +1,9 @@
+'use client';
 import "./globals.css";
 import Footer from "../components/footer/Footer";
 import Header from "../components/header/Header";
-
+import useAuth from "./hooks/useAuth";
+import UserAuth from "./useContext";
 
 import { Montserrat } from "next/font/google";
 const montserrat = Montserrat({ 
@@ -9,18 +11,27 @@ const montserrat = Montserrat({
   weight:['500', '700','900'] });
 
 
-
 export default function RootLayout({ children }) {
+  const isAutentified = useAuth();
+  // console.log("***********************************************************************")
+  // console.log("**** isAutentified: ", isAutentified);
+
+  const values = {isAutentified}
 
   return (
     <html lang="en">
       <body className={montserrat.className}>
       <div className="overlay"></div>
-        <section className="container">
-            <Header/>
-            {children}
-            <Footer/>
-        </section>
+      <section className="container">
+      <UserAuth.Provider value={values}>
+          <Header/>
+          {children}
+          <Footer/>
+      </UserAuth.Provider>
+         
+      </section>
+      
+    
       </body>
     </html>
   );
