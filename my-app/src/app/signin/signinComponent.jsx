@@ -36,7 +36,6 @@ const SigninComponent = () => {
       SetLoading(false);
     }))
     .catch(error => {
-      // alert(error);
       setErr(true)
       SetLoading(false);
     })

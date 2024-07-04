@@ -18,10 +18,8 @@
     display: none;
     z-index: 100;
     position: absolute;
-    /* top: -40px; */
 }
 .post:hover{
-    /* border: 1px solid #fff; */
     box-shadow: 0 2px 14px rgb(174, 174, 174);
 }
 .post:hover .removeImg{

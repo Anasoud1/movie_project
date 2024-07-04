@@ -3,7 +3,6 @@
     border: 3px solid green;
     height: 50px;
     border-radius: 25px;
-    /* padding: 2px 2px; */
     padding-left: 8px;
     background-color: rgba(0, 0, 0, 0.2);
   }
@@ -40,7 +39,6 @@
       border: 3px solid green;
       height: 40px;
       border-radius: 25px;
-      /* padding: 2px 2px; */
       padding-left: 4px;
       width: 100%;
     }

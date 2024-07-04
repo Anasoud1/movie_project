@@ -13,8 +13,7 @@ const montserrat = Montserrat({
 
 export default function RootLayout({ children }) {
   const isAutentified = useAuth();
-  // console.log("***********************************************************************")
-  // console.log("**** isAutentified: ", isAutentified);
+ 
 
   const values = {isAutentified}
 

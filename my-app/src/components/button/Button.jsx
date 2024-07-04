@@ -15,7 +15,6 @@ function LogOutButton() {
   
   const handleSignout = async () => {
     await signOut(auth);
-    console.log("log out");
     router.push(pathname === '/mylist' ? '/' : pathname)
   }
 

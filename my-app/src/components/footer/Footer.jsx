@@ -3,7 +3,6 @@ import React from 'react'
 import Image from 'next/image'
 import styles from './footer.module.css'
 import { usePathname } from 'next/navigation';
-import Link from 'next/link';
 
 function Footer() {
   const pathname = usePathname()

@@ -48,7 +48,6 @@ function MylistComponent() {
 
   const removeFromList = async(event, id) =>{
     event.preventDefault();
-    // event.stopPropagation();
     const dataRef = doc(db, "users", isAutentified.uid);
     const docSnap = await getDoc(dataRef);
     const myList = docSnap.data().myList;

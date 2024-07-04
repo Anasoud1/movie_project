@@ -70,7 +70,6 @@ async function Player({params}) {
                       <Image className={styles.imgProfile}
                       src={person.profile_path? "https://image.tmdb.org/t/p/w500" + person.profile_path: "/img/user.png"}
                       fill={true}
-                      // sizes="(max-width: 768px) 10px,  (max-width: 1200px) 100px, 100px"
                       alt='movie image'/>
                     </div>
                     <div className={styles.box}>

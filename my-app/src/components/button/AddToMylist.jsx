@@ -15,8 +15,7 @@ function AddToMylist({id, poster_path, vote_average, title, overview}) {
   const router = useRouter()
   const path = usePathname()
 
-  console.log('*********************************************************************')
-  console.log('isAuthentified: ', isAutentified)
+  
 
   useEffect(()=>{
       const fetchData = async () => {

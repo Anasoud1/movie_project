@@ -7,8 +7,7 @@ function MylistPagination({totalPosts, postPerPage, currentPage, setCurrentPage}
   for(let i = 1; i <= Math.ceil(totalPosts/postPerPage); i++){
     pages.push(i)
   }
-  console.log('totalPosts: ',totalPosts)
-  console.log('pages: ',pages)
+  
 
   return (
     <>
