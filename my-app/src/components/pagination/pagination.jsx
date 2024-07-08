@@ -1,5 +1,7 @@
 import React from 'react'
 import styles from './pagination.module.css'
+
+
 function Pagination({currentPage, setCurrentPage}) {
     let pages = []
 
