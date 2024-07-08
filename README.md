@@ -43,6 +43,7 @@ npm install
   NEXT_PUBLIC_FIREBASE_APP_ID=your_firebase_app_id
   NEXT_PUBLIC_TMDB_API_KEY=your_tmdb_api_key
   ```
+
 4- Start the development server:
 
 ```
@@ -52,27 +53,26 @@ npm run dev
 5- Open your browser and visit http://localhost:3000.
 
 ## Usage
-  * Search for a Movie:
-
+ 1- Search for a Movie:
+ 
 Use the search bar to find a specific movie by its title.
   
-  * Explore Movies:
+ 2- Explore Movies:
 
 Browse the navbar to explore a variety of movies.
 
-  * Watch Trailers:
+ 3- Watch Trailers:
 
 Click on a movie to watch its trailer.
 
-  * View Movie Details:
+ 4- View Movie Details:
 
 Click on a movie to read about its storyline and actors.
   
-  * Add to Watchlist:
+ 5- Add to Watchlist:
 
 Sign in to your account.
-
-  * Add movies to your watchlist for future viewing.
+Add movies to your watchlist for future viewing.
 
 ## Contributing
 1- Fork the repository.
