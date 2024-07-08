@@ -59,20 +59,20 @@ Use the search bar to find a specific movie by its title.
   
  2- Explore Movies:
 
-Browse the navbar to explore a variety of movies.
+ - Browse the navbar to explore a variety of movies.
 
  3- Watch Trailers:
 
-Click on a movie to watch its trailer.
+ - Click on a movie to watch its trailer.
 
  4- View Movie Details:
 
-Click on a movie to read about its storyline and actors.
+- Click on a movie to read about its storyline and actors.
   
  5- Add to Watchlist:
 
-Sign in to your account.
-Add movies to your watchlist for future viewing.
+- Sign in to your account.
+- Add movies to your watchlist for future viewing.
 
 ## Contributing
 1- Fork the repository.
