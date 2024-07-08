@@ -4,6 +4,7 @@ import UserAuth from '@/app/useContext';
 import { doc, getDoc, updateDoc } from 'firebase/firestore';
 import { useContext, useEffect, useState } from 'react'
 import styles from '@/app/(dynamic)/page.module.css'
+import st from './myList.module.css'
 import Link from 'next/link';
 import Image from 'next/image';
 import MylistPagination from '@/components/pagination/mylistPagination';
@@ -55,11 +56,12 @@ function MylistComponent() {
     await updateDoc(dataRef, {
       myList: newList
     });
-    setData(newList)
+    setData(newList.slice(firstIndex, lastIndex))
   }
 
   return (
     <div>
+        {data.length === 0 && <h1 className={st.empty}>Watchlist empty</h1>}
         <div className={styles.container}>
             {
             data.map(movie => (

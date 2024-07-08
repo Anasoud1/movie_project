@@ -10,7 +10,7 @@ import { faPlus, faTrashCan } from '@fortawesome/free-solid-svg-icons';
 
 function AddToMylist({id, poster_path, vote_average, title, overview}) {
 
-  const [userExist, setUserExist] = useState(false);
+  const [movieExists, setmovieExists] = useState(false); 
   const {isAutentified} = useContext(UserAuth);
   const router = useRouter()
   const path = usePathname()
@@ -25,10 +25,9 @@ function AddToMylist({id, poster_path, vote_average, title, overview}) {
           const docSnap = await getDoc(dataRef);
           const myList = docSnap.data().myList;
           if (docSnap.exists() && myList.some(obj => obj.id === id)) {
-            setUserExist(true);
+            setmovieExists(true);
           }
         }
-      
     };
 
     fetchData();
@@ -42,7 +41,7 @@ function AddToMylist({id, poster_path, vote_average, title, overview}) {
         const docSnap = await getDoc(dataRef);
         const myList = docSnap.data().myList;
         
-        const existingData = myList || {};
+        const existingData = myList;
         const obj = {
             id,
             poster_path,
@@ -54,7 +53,7 @@ function AddToMylist({id, poster_path, vote_average, title, overview}) {
         await updateDoc(dataRef, {
             myList: newData
         })
-        setUserExist(true);
+        setmovieExists(true);
     } catch (error) {
         console.error('error in updating ', error)
     }
@@ -68,12 +67,13 @@ function AddToMylist({id, poster_path, vote_average, title, overview}) {
     await updateDoc(dataRef, {
       myList: newList
     })
-    setUserExist(false)
+    setmovieExists(false)
   }
+
   return (
     <>
-    {isAutentified && !userExist && <button className={styles.addBtn} onClick={addToMylist}><FontAwesomeIcon className={styles.addIcon} icon={faPlus} />Add to Watchlist</button>}
-    {isAutentified && userExist && <button className={styles.addBtn} onClick={removeFromList}><FontAwesomeIcon className={styles.removeIcon} icon={faTrashCan} />Remove from Watchlist</button>}
+    {isAutentified && !movieExists && <button className={styles.addBtn} onClick={addToMylist}><FontAwesomeIcon className={styles.addIcon} icon={faPlus} />Add to Watchlist</button>}
+    {isAutentified && movieExists && <button className={styles.addBtn} onClick={removeFromList}><FontAwesomeIcon className={styles.removeIcon} icon={faTrashCan} />Remove from Watchlist</button>}
     {!isAutentified && <button className={styles.addBtn} onClick={()=> {router.push(`/signin?redirect=${path}`)}}> <FontAwesomeIcon className={styles.addIcon} icon={faPlus} />Add to Watchlist</button>}
     </>
 

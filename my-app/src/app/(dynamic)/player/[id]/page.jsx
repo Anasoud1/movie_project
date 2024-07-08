@@ -11,6 +11,7 @@ export const metadata = {
 };
 
 const apiKey = process.env.API_KEY;
+
 async function getData(id){
   const res = await fetch(`https://api.themoviedb.org/3/movie/${id}/videos?api_key=${apiKey}`)
   if (!res.ok) throw new Error('Failed to fetch data')
