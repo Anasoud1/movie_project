@@ -55,7 +55,7 @@ npm run dev
 ## Usage
  1- Search for a Movie:
  
-Use the search bar to find a specific movie by its title.
+- Use the search bar to find a specific movie by its title.
   
  2- Explore Movies:
 
