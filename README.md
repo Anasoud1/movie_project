@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# YouMovie
+YouMovie is a web application that allows users to explore and search for movies, similar to IMDB. Users can watch trailers, find their favorite actors and storylines, and add movies to their watchlist after signing in.
 
-## Getting Started
+### Features
+  * Search Movies: Find specific movies by title.
+  * Explore Movies: Browse through a collection of movies to discover new ones.
+  * Watch Trailers: View trailers for movies.
+  * Movie Details: Read about the movie's storyline and actors.
+  * Watchlist: Add movies to a personalized watchlist after signing in.
 
-First, run the development server:
+## Technology Stack
+- **Frontend**:
+  Next.js: A React framework for production.
+- **Backend**:
+  Firebase: Used for authentication and Firestore for the database.
+- **APIs**:
+  themoviedb.org: For movie data.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Installation
+1- Clone the repository:
+
+```
+git clone https://github.com/Anasoud1/movie-project.git
+cd movie-project
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2- Install dependencies:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+3-Set up environment variables:
 
-## Learn More
+  * Create a .env file in the root of your project.
+  * Add your Firebase configuration and API keys:
+   ```
+  NEXT_PUBLIC_FIREBASE_API_KEY=your_firebase_api_key
+  NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_firebase_auth_domain
+  NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_firebase_project_id
+  NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your_firebase_storage_bucket
+  NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_firebase_messaging_sender_id
+  NEXT_PUBLIC_FIREBASE_APP_ID=your_firebase_app_id
+  NEXT_PUBLIC_TMDB_API_KEY=your_tmdb_api_key
+  ```
+4- Start the development server:
 
-To learn more about Next.js, take a look at the following resources:
+```
+npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+5- Open your browser and visit http://localhost:3000.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Usage
+  * Search for a Movie:
 
-## Deploy on Vercel
+Use the search bar to find a specific movie by its title.
+  
+  * Explore Movies:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Browse the navbar to explore a variety of movies.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+  * Watch Trailers:
+
+Click on a movie to watch its trailer.
+
+  * View Movie Details:
+
+Click on a movie to read about its storyline and actors.
+  
+  * Add to Watchlist:
+
+Sign in to your account.
+
+  * Add movies to your watchlist for future viewing.
+
+## Contributing
+1- Fork the repository.
+2- Create your feature branch: git checkout -b feature/YourFeature
+3- Commit your changes: git commit -m 'Add some feature'
+4- Push to the branch: git push origin feature/YourFeature
+5- Open a pull request.
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgements
+Next.js
+Firebase
+themoviedb.org
