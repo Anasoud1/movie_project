@@ -85,6 +85,6 @@ Add movies to your watchlist for future viewing.
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Acknowledgements
-Next.js
-Firebase
-themoviedb.org
+ * **Next.js**
+ * **Firebase**
+ * **themoviedb.org**
