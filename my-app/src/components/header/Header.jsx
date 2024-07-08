@@ -7,7 +7,7 @@ import Search from './Search';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faCircleArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { usePathname } from 'next/navigation'
-import UserAuth from '@/app/useContext';
+import UserAuth from '@/app/hooks/useContext';
 
 
 function Header() {

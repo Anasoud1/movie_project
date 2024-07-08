@@ -3,7 +3,7 @@ import "./globals.css";
 import Footer from "../components/footer/Footer";
 import Header from "../components/header/Header";
 import useAuth from "./hooks/useAuth";
-import UserAuth from "./useContext";
+import UserAuth from "./hooks/useContext";
 
 import { Montserrat } from "next/font/google";
 const montserrat = Montserrat({ 

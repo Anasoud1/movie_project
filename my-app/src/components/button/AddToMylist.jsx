@@ -3,7 +3,7 @@ import React, { useEffect, useState, useContext} from 'react'
 import styles from './button.module.css'
 import { doc, updateDoc, getDoc } from "firebase/firestore";
 import { db } from '@/app/firebase';
-import UserAuth from '@/app/useContext';
+import UserAuth from '@/app/hooks/useContext';
 import { usePathname, useRouter } from 'next/navigation';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faTrashCan } from '@fortawesome/free-solid-svg-icons';

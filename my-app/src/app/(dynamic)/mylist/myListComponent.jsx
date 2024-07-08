@@ -1,6 +1,6 @@
 'use client';
 import { db } from '@/app/firebase';
-import UserAuth from '@/app/useContext';
+import UserAuth from '@/app/hooks/useContext';
 import { doc, getDoc, updateDoc } from 'firebase/firestore';
 import { useContext, useEffect, useState } from 'react'
 import styles from '@/app/(dynamic)/page.module.css'
@@ -26,6 +26,7 @@ function MylistComponent() {
   const {isAutentified} = useContext(UserAuth);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPosts, setTotalPosts] = useState(0)
+
   
   const postPerPage = 20;
   const lastIndex = currentPage * postPerPage;
@@ -43,7 +44,6 @@ function MylistComponent() {
         setData(myList.slice(firstIndex, lastIndex));
       }
   };
-
   fetchData();
 }, [currentPage, isAutentified])
 
@@ -61,7 +61,6 @@ function MylistComponent() {
 
   return (
     <div>
-        {data.length === 0 && <h1 className={st.empty}>Watchlist empty</h1>}
         <div className={styles.container}>
             {
             data.map(movie => (
