@@ -78,7 +78,9 @@ npm run dev
 1- Fork the repository.
 
 2- Create your feature branch: 
-```git checkout -b feature/YourFeature```
+```
+git checkout -b feature/YourFeature
+```
 
 3- Commit your changes: 
 ```
